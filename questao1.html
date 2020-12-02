@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" id="clique" onClick="gerarQuadrado()">Gerar novo quadrado </button>
+    <div></div>
+</body>
+<script>
+    var clique = document.querySelector('#clique');
+    clique.style.color = '#fff'
+    clique.style.fontWeight = 'bold';
+    clique.style.backgroundColor = '#424242';
+    clique.style.border = 'solid #ddd';
+    clique.style.width = '200px';
+    clique.style.height = '40px';
+    clique.style.marginLeft = '45%';
+
+    function gerarQuadrado() {
+        let box = document.createElement("div");
+        box.style.width = '180px';
+        box.style.height = '180px';
+        box.style.margin = '5px';
+        box.style.float=  'left';
+        box.style.backgroundColor = '#f00';
+        box.setAttribute("id","boxID");
+        document.body.appendChild(box);
+            }
+</script>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body></body>
+<script>
+    function makelist() {
+        var names = ["Diego", "Gabriel", "Lucas"];
+        var lista = document.createElement("ul");
+        document.body.appendChild(lista);
+        for (let i = 0; i < names.length; i++) {
+            var item = document.createElement('li');
+            lista.appendChild(item);
+            item.appendChild(document.createTextNode(names[i]));
+        }
+
+    }
+    console.log(makelist());
+</script>
+
+</html>

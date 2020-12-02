@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body onload>
+    <button type="button" id="clique" onClick="gerarQuadrado()">Gerar novo quadrado </button>
+    <div onmouseover=""></div>
+</body>
+<script>
+    var clique = document.querySelector('#clique');
+    clique.style.color = '#fff'
+    clique.style.fontWeight = 'bold';
+    clique.style.backgroundColor = '#424242';
+    clique.style.border = 'solid #ddd';
+    clique.style.width = '200px';
+    clique.style.height = '40px';
+    clique.style.marginLeft = '45%';
+
+    function getRandomColor() {
+        var letters = "0123456789ABCDEF"
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+
+    function gerarQuadrado() {
+        var box = document.createElement("div");
+        box.style.width = '180px';
+        box.style.height = '180px';
+        box.style.margin = '5px';
+        box.style.float = 'left';
+        box.style.backgroundColor = '#FF0000';
+        box.setAttribute("id", "boxID");
+        document.body.appendChild(box); 
+        box.addEventListener("mouseover", function (){
+        var newColor = getRandomColor();
+            box.style.backgroundColor = newColor;
+        });
+    }
+
+</script>
+
+</html>
